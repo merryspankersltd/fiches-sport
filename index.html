@@ -2,7 +2,100 @@
 <html>
   
   <head>
-    <link rel="stylesheet" href="fiche-sport.css">
+
+    <style>
+      body {
+  grid-template-column: 1fr 350px;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 350px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+dl {
+  flex: 0 0 0;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  overflow: visible;
+  line-height: 2;
+}
+
+dl dt {
+  flex: 0 0 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: right;
+  font-weight: bold;
+}
+
+dl dd {
+  margin-left: auto;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 0 0 50%
+}
+
+.page_header {
+  grid-column: 1;
+  margin: 10px;
+}
+
+.page_footer {
+  margin: 10px;
+}
+
+.section {
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.section_header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background: silver;
+  padding: 10px 25px;
+}
+
+.section_header h2 {
+  flex: 0 0 100%;
+  text-transform: capitalize;
+}
+
+
+.section_content {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px;
+}
+
+.item {
+  flex-basis: auto;
+  flex-grow: 0;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+#map {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+    </style>
   </head>
 
   <body>
