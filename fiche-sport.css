@@ -7,11 +7,12 @@
 .section {
   margin: 10px;
   border: 1px solid black;
-  padding: 25px;
 }
 
 .section.section_header {
+  padding: 25px;
 }
 
 .section.section_content {
+  padding: 25px;
 }
