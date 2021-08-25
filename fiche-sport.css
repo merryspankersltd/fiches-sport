@@ -7,11 +7,12 @@
 .section {
   margin: 10px;
   border-radius: 7px;
-  border: 1px solid black;
+  border: 1px solid gray;
   padding: 25px;
 }
 
 .section.section_header {
+  background: silver;
   padding: 25px;
 }
 
