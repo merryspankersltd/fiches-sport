@@ -6,16 +6,26 @@
 
 .section {
   margin: 10px;
-  border-radius: 7px;
+  border-radius: 5px;
   border: 1px solid gray;
-  padding: 25px;
 }
 
-.section.section_header {
+.section_header {
   background: silver;
-  margin: 25px;
+  padding: 10px 25px;
 }
 
-.section.section_content {
-  margin: 25px;
+.section_content {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px;
+}
+
+.item {
+  flex-basis: auto;
+  flex-grow: 1;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
 }
