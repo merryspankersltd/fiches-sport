@@ -3,155 +3,155 @@
   
   <head>
     <link rel="stylesheet" href="fiche-sport.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
-    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
   </head>
 
   <body>
     
-    <section class="grid-container">
-
-      <div class="page_header">
-
-        <h1>FICHE EQUIPEMENT</h1>
-
+      <div class="cell" id="inst">
+        
+        <div class="hd">installation</div>
+        
+        <div class="ct" id="inst">
+          
+          <dl class="item-id">
+            <h4 style="grid-column: 1 / span 2">identification installation</h4>
+            <dt>identifiant</dt><dd>I693880002</dd>
+            <dt>nom</dt><dd>école primaire gilbert delorme</dd>
+            <dt>adresse</dt><dd>159 route de Vienne, 69008 Lyon 08</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">caractéristiques</h4>
+            <dt>installation particulière</dt><dd>établissement scolaire</dd>
+            <dt>multi-commune</dt><dd>non</dd>
+            <dt>possibilité de restauration</dt><dd>oui</dd>
+            <dt>possibilité d'hébergement</dt><dd>non</dd>
+            <dt>nombre de lits</dt><dd>0</dd>
+            <dt>nombre de places de parking</dt><dd>0</dd>
+            <dt>dont handicapé</dt><dd>0</dd>
+            <dt>emprise foncière</dt><dd>9602 m²</dd>
+            <dt>desserte</dt><dd>bus</dd>
+          </dl>
+          
+          <div class="item" id="map"></div>
+          
+        </div>
+        
       </div>
 
-      <div class="section" id="map"></div>
-
-      <div id="popup" class="ol-popup">
-         <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-         <div id="popup-content"></div>
+      <div class="cell" id="eq">
+        
+        <div class="hd">équipement</div>
+        
+        <div class="ct">
+          
+          <dl class="item-id">
+            <h4 style="grid-column: 1 / span 2">identification équipement</h4>
+            <dt>identifiant</dt><dd>I693880002</dd>
+            <dt>nom</dt><dd>salle d'évolution</dd>
+            <dt>type</dt><dd>Salles polyvalentes / des fêtes / non spécialisées</dd>
+            <dt>adresse internet</dt><dd>néant</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">administration</h4>
+            <dt>propriétaire principal</dt><dd>commune</dd>
+            <dt>gestionnaire principal</dt><dd>commune</dd>
+            <dt>propriétaire secondaire</dt><dd>commune</dd>
+            <dt>gestionnaire secondaire</dt><dd>établissement public</dd>
+            <dt>gestionnaire en DSP</dt><dd>non</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">mise en service</h4>
+            <dt>année</dt><dd>1884</dd>
+            <dt>tranche d'année de mise en service</dt><dd>avant 1945</dd>
+            <dt>nombre de places en tribune</dt><dd>0</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">homologation</h4>
+            <dt>soumis à procédure d'autorisation préfectorale</dt><dd>non</dd>
+            <dt>arrêté d'ouverture au public</dt><dd>non</dd>
+            <dt>date de l'homologation préfectorale</dt><dd>néant</dd>
+            <dt>période de l'homologation préfectorale</dt><dd>néant</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">ERP</h4>
+            <dt>catégorie ERP (1 - 5)</dt><dd>néant</dd>
+            <dt>type chapiteau tente</dt><dd>non</dd>
+            <dt>établissement flottant</dt><dd>non</dd>
+            <dt>salle polyvalente</dt><dd>non</dd>
+            <dt>restaurant / boisson</dt><dd>non</dd>
+            <dt>hôtel</dt><dd>non</dd>
+            <dt>hôtel restaurant d'altitude</dt><dd>non</dd>
+            <dt>salle de danse et jeux</dt><dd>non</dd>
+            <dt>établissement de plein-air</dt><dd>non</dd>
+            <dt>enseignement et colo</dt><dd>non</dd>
+            <dt>type PE</dt><dd>non</dd>
+            <dt>structure gonflable</dt><dd>non</dd>
+            <dt>établissement sportif couvert</dt><dd>non</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">présence de</h4>
+            <dt>vestiaires avec douches</dt><dd>oui</dd>
+            <dt>éclairage</dt><dd>oui</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">fiche technique</h4>
+            <dt>nature du sol</dt><dd>gazon naturel</dd>
+            <dt>nature de l'équipement</dt><dd>découvert</dd>
+            <dt>hauteur de l'aire d'évolution</dt><dd>0</dd>
+            <dt>longueur de l'aire d'évolution</dt><dd>114 m</dd>
+            <dt>largeur de l'aire d'évolution</dt><dd>64 m</dd>
+            <dt>surface de l'aire d'évolution</dt><dd>7296 m²</dd>
+            <dt>nb de couloirs, pistes, postes etc</dt><dd>néant</dd>
+            <dt>nombre de vestiaires sportifs</dt><dd>4</dd>
+            <dt>vestiaires chauffés</dt><dd>oui</dd>
+            <dt>nombre de vestiaires arbitres enseignants</dt><dd>2</dd>
+            <dt>sanitaires sportifs</dt><dd>oui</dd>
+            <dt>sanitaires public</dt><dd>oui</dd>
+            <dt>ouverture saisonnière</dt><dd>non</dd>
+            <dt>équipement de proximité (j7 h24)</dt><dd>non</dd>
+            <dt>sono fixe</dt><dd>non</dd>
+            <dt>tableau fixe</dt><dd>non</dd>
+            <dt>chronométrage</dt><dd>non</dd>
+            <dt>aménagement d'information</dt><dd>oui</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">usages</h4>
+            <dt>types d'utilisateurs</dt><dd>scolaires, universités</dd>
+            <dt>types d'utilisations</dt><dd>formations sportives, récréations sportives</dd>
+          </dl>
+          
+          <dl class="item">
+            <h4 style="grid-column: 1 / span 2">travaux</h4>
+            <dt>tranche de date des derniers travaux</dt><dd>néant</dd>
+            <dt>date des derniers travaux</dt><dd>néant</dd>
+            <dt>motif des derniers gros travaux</dt><dd>néant</dd>
+          </dl>
+          
+        </div>
+        
       </div>
 
-      <div class="section" id="installation">
-
-        <div class="section_header">
-          <h2>installation</h2>
+      <div class="cell" id="act">
+        
+        <div class="hd">activités</div>
+        
+        <div class="ct">
+          
+          <dl class="item">
+          </dl>
+          
         </div>
-
-        <div class="section_content">
-          <div class="item">
-            <dl>
-              <dt>installation numéro:</dt><dd>I693820007</dd>
-              <dt>nom:</dt><dd>Gymnase Chanfray</dd>
-              <dt>adresse:</dt><dd>1 rue Casimir Périer, 69002 Lyon 02</dd>
-            </dl>
-          </div>
-          <div class="item">
-            <dl>
-              <dt>installation particulière:</dt><dd>I693820007</dd>
-              <dt>multi commune:</dt><dd>oui</dd>
-              <dt>possibilité de restauration:</dt><dd>1 rue Casimir Périer, 69002 Lyon 02</dd>
-              <dt>possibilité d'hébergement:</dt><dd>I693820007</dd>
-              <dt>nombre de lits:</dt><dd>0</dd>
-              <dt>nombre total de places de parking:</dt><dd>Gymnase Chanfray</dd>
-              <dt>dont places handicapé:</dt><dd>1 rue Casimir Périer, 69002 Lyon 02</dd>
-              <dt>emprise foncière:</dt><dd>8 051.00 m²</dd>
-            </dl>
-          </div>
-
-        </div>
-
+        
       </div>
-
-      <div class="section" id="equipment">
-
-        <div class="section_header">
-          <h2>équipements</h2>
-        </div>
-
-        <div class="section_content">
-          equipment content div
-        </div>
-
-      </div>
-
-      <div class="section" id="activities">
-
-        <div class="section_header">
-          <h2>activités</h2>
-        </div>
-
-        <div class="section_content">
-          activities content div
-        </div>
-
-      </div>
-
-      <div class="page_footer">
-        page footer div
-      </div>
-      
-    </section>
-    <script>
-
- var attribution = new ol.control.Attribution({
-     collapsible: false
- });
-
- var map = new ol.Map({
-     controls: ol.control.defaults({attribution: false}).extend([attribution]),
-     layers: [
-         new ol.layer.Tile({
-             source: new ol.source.OSM({
-                 url: 'https://tile.openstreetmap.be/osmbe/{z}/{x}/{y}.png',
-                 attributions: [ ol.source.OSM.ATTRIBUTION, 'Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>' ],
-                 maxZoom: 18
-             })
-         })
-     ],
-     target: 'map',
-     view: new ol.View({
-         center: ol.proj.fromLonLat([4.35247, 50.84673]),
-         maxZoom: 18,
-         zoom: 14
-     })
- });
-      
-  var layer = new ol.layer.Vector({
-     source: new ol.source.Vector({
-         features: [
-             new ol.Feature({
-                 geometry: new ol.geom.Point(ol.proj.fromLonLat([4.35247, 50.84673]))
-             })
-         ]
-     })
- });
- map.addLayer(layer);
-      
-var container = document.getElementById('popup');
- var content = document.getElementById('popup-content');
- var closer = document.getElementById('popup-closer');
-
- var overlay = new ol.Overlay({
-     element: container,
-     autoPan: true,
-     autoPanAnimation: {
-         duration: 250
-     }
- });
- map.addOverlay(overlay);
-
- closer.onclick = function() {
-     overlay.setPosition(undefined);
-     closer.blur();
-     return false;
- };
-      
- map.on('singleclick', function (event) {
-     if (map.hasFeatureAtPixel(event.pixel) === true) {
-         var coordinate = event.coordinate;
-
-         content.innerHTML = '<b>Hello world!</b><br />I am a popup.';
-         overlay.setPosition(coordinate);
-     } else {
-         overlay.setPosition(undefined);
-         closer.blur();
-     }
- });
-      
-    </script>
+    
   </body>
   
 </html>
