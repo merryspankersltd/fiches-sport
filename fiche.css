@@ -1,3 +1,4 @@
+@media print {
 body {
     background-image: url("bkg.png");
     background-size: cover;
@@ -145,7 +146,7 @@ h2::after {
     
 }
 
-@media print {
+/*@media print {*/
     @page {
         size: A4;
         margin: 0mm;
