@@ -63,4 +63,9 @@
         border: 0.1em solid grey;
         padding: 1em;
     }
+
+    #map {
+        grid-column: span 2;
+        height: 75mm;
+    }
 }
