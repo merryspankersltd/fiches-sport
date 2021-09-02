@@ -62,6 +62,7 @@
     .item {
         border: 0.1em solid grey;
         padding: 1em;
+        break-inside: avoid;
     }
 
     #map {
