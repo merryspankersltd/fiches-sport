@@ -23,7 +23,9 @@
       }
       
       @top-right: {
-        content: element(logos);
+        content:
+          url("https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/logo_gl.png")
+          url("https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/logo_agence.png");
       }
       
     }
@@ -32,10 +34,6 @@
       position: running(ref);
       font-size: 0.7em;
       font-style: italic;
-    }
-    
-    .logos {
-      position: running(logos);
     }
     
     .cell {
