@@ -151,20 +151,15 @@ h2::after {
         margin: 0mm;
         background-image: url("bkg.png");
         background-size: cover;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.7em;
+        display: grid;
+        grid-template-columns: 10mm 1fr;
     }
 
     #map {
         grid-column: span 2;
         height: 75mm;
-    }
-    
-    body {
-    background-image: url("https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/bkg.png");
-    background-size: cover;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.7em;
-    display: grid;
-    grid-template-columns: 10mm 1fr;
     }
 
     .cell {
