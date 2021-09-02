@@ -10,6 +10,32 @@
       background-size: cover;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 0.8em;
+      
+      @left-top: {
+        content: counter(page);
+        color: #a0381e;
+        font-size: 1em;
+        font-weight: bold;
+      }
+      
+      @top-left: {
+        content: element(ref);
+      }
+      
+      @top-right: {
+        content: element(logos);
+      }
+      
+    }
+    
+    .ref {
+      position: running(ref);
+      font-size: 0.7em;
+      font-style: italic;
+    }
+    
+    .logos {
+      position: running(logos);
     }
     
     .cell {
