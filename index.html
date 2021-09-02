@@ -1,158 +1,171 @@
 <!DOCTYPE html>
 <html>
-  
-  <head>
-    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/print.css">
-  </head>
+    <head>
+        <!--link rel="stylesheet" type="text/css" href="fiche.css" media="all"/-->
+        <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/print.css" media="all">
+        <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+    </head>
 
-  <body>
-    
-      <div class="cell" id="inst">
-        
-        <div class="hd">installation</div>
-        
-        <div class="ct" id="inst">
-          
-          <dl class="item-id">
-            <h4 style="grid-column: 1 / span 2">identification installation</h4>
-            <dt>identifiant</dt><dd>I693880002</dd>
-            <dt>nom</dt><dd>école primaire gilbert delorme</dd>
-            <dt>adresse</dt><dd>159 route de Vienne, 69008 Lyon 08</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">caractéristiques</h4>
-            <dt>installation particulière</dt><dd>établissement scolaire</dd>
-            <dt>multi-commune</dt><dd>non</dd>
-            <dt>possibilité de restauration</dt><dd>oui</dd>
-            <dt>possibilité d'hébergement</dt><dd>non</dd>
-            <dt>nombre de lits</dt><dd>0</dd>
-            <dt>nombre de places de parking</dt><dd>0</dd>
-            <dt>dont handicapé</dt><dd>0</dd>
-            <dt>emprise foncière</dt><dd>9602 m²</dd>
-            <dt>desserte</dt><dd>bus</dd>
-          </dl>
-          
-          <div class="item" id="map"></div>
-          
-        </div>
-        
-      </div>
+    <body>
 
-      <div class="cell" id="eq">
-        
-        <div class="hd">équipement</div>
-        
-        <div class="ct">
-          
-          <dl class="item-id">
-            <h4 style="grid-column: 1 / span 2">identification équipement</h4>
-            <dt>identifiant</dt><dd>I693880002</dd>
-            <dt>nom</dt><dd>salle d'évolution</dd>
-            <dt>type</dt><dd>Salles polyvalentes / des fêtes / non spécialisées</dd>
-            <dt>adresse internet</dt><dd>néant</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">administration</h4>
-            <dt>propriétaire principal</dt><dd>commune</dd>
-            <dt>gestionnaire principal</dt><dd>commune</dd>
-            <dt>propriétaire secondaire</dt><dd>commune</dd>
-            <dt>gestionnaire secondaire</dt><dd>établissement public</dd>
-            <dt>gestionnaire en DSP</dt><dd>non</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">mise en service</h4>
-            <dt>année</dt><dd>1884</dd>
-            <dt>tranche d'année de mise en service</dt><dd>avant 1945</dd>
-            <dt>nombre de places en tribune</dt><dd>0</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">homologation</h4>
-            <dt>soumis à procédure d'autorisation préfectorale</dt><dd>non</dd>
-            <dt>arrêté d'ouverture au public</dt><dd>non</dd>
-            <dt>date de l'homologation préfectorale</dt><dd>néant</dd>
-            <dt>période de l'homologation préfectorale</dt><dd>néant</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">ERP</h4>
-            <dt>catégorie ERP (1 - 5)</dt><dd>néant</dd>
-            <dt>type chapiteau tente</dt><dd>non</dd>
-            <dt>établissement flottant</dt><dd>non</dd>
-            <dt>salle polyvalente</dt><dd>non</dd>
-            <dt>restaurant / boisson</dt><dd>non</dd>
-            <dt>hôtel</dt><dd>non</dd>
-            <dt>hôtel restaurant d'altitude</dt><dd>non</dd>
-            <dt>salle de danse et jeux</dt><dd>non</dd>
-            <dt>établissement de plein-air</dt><dd>non</dd>
-            <dt>enseignement et colo</dt><dd>non</dd>
-            <dt>type PE</dt><dd>non</dd>
-            <dt>structure gonflable</dt><dd>non</dd>
-            <dt>établissement sportif couvert</dt><dd>non</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">présence de</h4>
-            <dt>vestiaires avec douches</dt><dd>oui</dd>
-            <dt>éclairage</dt><dd>oui</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">fiche technique</h4>
-            <dt>nature du sol</dt><dd>gazon naturel</dd>
-            <dt>nature de l'équipement</dt><dd>découvert</dd>
-            <dt>hauteur de l'aire d'évolution</dt><dd>0</dd>
-            <dt>longueur de l'aire d'évolution</dt><dd>114 m</dd>
-            <dt>largeur de l'aire d'évolution</dt><dd>64 m</dd>
-            <dt>surface de l'aire d'évolution</dt><dd>7296 m²</dd>
-            <dt>nb de couloirs, pistes, postes etc</dt><dd>néant</dd>
-            <dt>nombre de vestiaires sportifs</dt><dd>4</dd>
-            <dt>vestiaires chauffés</dt><dd>oui</dd>
-            <dt>nombre de vestiaires arbitres enseignants</dt><dd>2</dd>
-            <dt>sanitaires sportifs</dt><dd>oui</dd>
-            <dt>sanitaires public</dt><dd>oui</dd>
-            <dt>ouverture saisonnière</dt><dd>non</dd>
-            <dt>équipement de proximité (j7 h24)</dt><dd>non</dd>
-            <dt>sono fixe</dt><dd>non</dd>
-            <dt>tableau fixe</dt><dd>non</dd>
-            <dt>chronométrage</dt><dd>non</dd>
-            <dt>aménagement d'information</dt><dd>oui</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">usages</h4>
-            <dt>types d'utilisateurs</dt><dd>scolaires, universités</dd>
-            <dt>types d'utilisations</dt><dd>formations sportives, récréations sportives</dd>
-          </dl>
-          
-          <dl class="item">
-            <h4 style="grid-column: 1 / span 2">travaux</h4>
-            <dt>tranche de date des derniers travaux</dt><dd>néant</dd>
-            <dt>date des derniers travaux</dt><dd>néant</dd>
-            <dt>motif des derniers gros travaux</dt><dd>néant</dd>
-          </dl>
-          
+        <!--<div class="topleft"></div>-->
+        <div class="left-margin">
+            <div class="page"></div>
+            <div class="date">
+                septembre 2021
+            </div>
+            <div class="project_name">
+                atlas du sport
+            </div>
         </div>
-        
-      </div>
 
-      <div class="cell" id="act">
-        
-        <div class="hd">activités</div>
-        
-        <div class="ct">
-          
-          <dl class="item">
-          </dl>
-          
+        <div class="header">
+            <div class="ref">
+                Ref/ 391<br>
+                Code commune Insee: 69046<br>
+            </div>
+            <img class="logo" src="https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/logo_gl.png">
+            <img class="logo" src="https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/logo_agence.png">
         </div>
-        
-      </div>
-    
-  </body>
-  
+
+        <div class="title">
+            <h1>fiche équipement :</h1>
+            <p class="eq_name">Charly</p>
+        </div>
+
+        <div class="cell">
+            <h2>installation</h2>
+            (peut intégrer plusieurs équipements)
+            <div class="item" id="ident">
+                <div class="pair"><div class="key">numéro</div><div class="val">690460001</div></div>
+                <div class="pair"><div class="key">nom</div><div class="val">STADE RAYMOND BOURETTE</div></div>
+                <div class="pair"><div class="key">adresse</div><div class="val">Route Du Bas Privas, 69 390 Charly</div></div>
+            </div>
+            <div class="item" id="map">map bla bla bla</div>
+            <div class="item" id="caracts">
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre de couvert</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Nombre de lit</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Présence d’un internat</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">49</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">18 816</div></div>
+                <div class="pair"><div class="key">Gardien</div><div class="val">non</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre de couvert</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Nombre de lit</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Présence d’un internat</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">49</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">18 816</div></div>
+                <div class="pair"><div class="key">Gardien</div><div class="val">non</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre de couvert</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Nombre de lit</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Présence d’un internat</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">49</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">18 816</div></div>
+                <div class="pair"><div class="key">Gardien</div><div class="val">non</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre de couvert</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Nombre de lit</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Présence d’un internat</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">49</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">18 816</div></div>
+                <div class="pair"><div class="key">Gardien</div><div class="val">non</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre de couvert</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Nombre de lit</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Présence d’un internat</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">49</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">18 816</div></div>
+                <div class="pair"><div class="key">Gardien</div><div class="val">non</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre de couvert</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Nombre de lit</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Présence d’un internat</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">49</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">0</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">18 816</div></div>
+                <div class="pair"><div class="key">Gardien</div><div class="val">non</div></div>
+            </div>
+        </div>
+        <div class="cell">
+            <h2>équipement</h2>
+        </div>
+        <div class="cell">
+            <h2>activités</h2>
+        </div>
+
+        <script>
+
+function random_text(min_length, max_length) {
+    var lg = Math.random() * (max_length - min_length) + min_length ;
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789                 ';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < lg; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
+
+function random_lines(min_lines, max_lines) {
+    var lg = Math.random() * (max_lines - min_lines) + min_lines ;
+    var new_line = document.createElement("div");
+    var new_key = document.createElement("div");
+    var new_val = document.createElement("div");
+    new_line.className = "pair";
+    new_key.className = "key";
+    new_val.className = "val";
+    new_line.appendChild(new_key);
+    new_line.appendChild(new_val);
+    for (var i = 0; i < lg; i++) {
+        result = new_line * lg;
+    }
+    console.log(result);
+    return result;
+}
+
+var els = document.getElementsByClassName("item")
+
+Array.from(els).forEach((el) => {
+    el.appendChild(random_lines(0, 25))
+});
+
+var els = document.getElementsByClassName("key")
+
+Array.from(els).forEach((el) => {
+	el.innerHTML = random_text(5, 25)
+});
+
+var els = document.getElementsByClassName("val")
+
+Array.from(els).forEach((el) => {
+	el.innerHTML = random_text(5, 50)
+});
+
+        </script>
+
+    </body>
 </html>
