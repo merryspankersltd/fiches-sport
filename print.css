@@ -37,4 +37,30 @@
         padding: 0em;
         margin: 0em;
     }
+
+    h2::after {
+        content: " : ";
+    }
+
+    .eq_name {
+        color: #f89e49;
+        font-size: 3em;
+        line-height: 1em;
+        padding: 0em;
+        margin: 0em;
+    }
+
+    .cell {
+        margin: 1em;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 1em;
+        row-gap: 1em;
+    }
+
+    .item {
+        border: 0.1em solid grey;
+        padding: 1em;
+    }
 }
