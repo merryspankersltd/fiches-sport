@@ -1,3 +1,4 @@
+#%%
 from selenium import webdriver
 import json
 
@@ -13,17 +14,28 @@ settings = {
             "account": "",
         }],
         "selectedDestinationId": "Save as PDF",
-        "version": 2
+        "version": 2,
+        "isHeaderFooterEnabled": False,
+        "isCssBackgroundEnabled": True
     }
 
 prefs = {'printing.print_preview_sticky_settings.appState': json.dumps(settings)}
 chrome_options.add_experimental_option('prefs', prefs)
 chrome_options.add_argument('--kiosk-printing')
+chrome_options.add_argument("--headless")
 
+#%%
 # todo: run the following headless
 driver = webdriver.Chrome(options=chrome_options)
+driver.implicitly_wait(5)
 
+#%%
 driver.get("https://merryspankersltd.github.io/fiches-sport/")
 
-# todo: option tu print with background
+#%%
+# todo: option to print with background ?
 driver.execute_script('window.print();')
+driver.implicitly_wait(5)
+
+#%%
+driver.quit()
