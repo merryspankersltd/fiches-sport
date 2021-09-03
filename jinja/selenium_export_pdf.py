@@ -39,3 +39,4 @@ driver.implicitly_wait(5)
 
 #%%
 driver.quit()
+# %%
