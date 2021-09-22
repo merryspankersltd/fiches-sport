@@ -3,16 +3,220 @@
 from jinja2 import Environment, FileSystemLoader
 #%%
 json_view = {
-    'ref': 391,
-    'depcom': '69046',
-    'eq_name': 'Charly'
+  "EquipementId": "E004I384570001",
+  "depcode": "38",
+  "depcom": "38457",
+  "coordx": 5.26674,
+  "coordy": 45.32896,
+  "installation": {
+    "n° installation": "n° I384570001",
+    "nom": "Ensemble Sportif",
+    "adresse": "rue du stade Le Pré Neuf 38870 Saint-Siméon-de-Bressieux",
+    "installation particulière": "Complexe sportif",
+    "multicommune": "non",
+    "hébergement": "non",
+    "nb lits": 0,
+    "nb places de parking": "50",
+    "dont handicapé": 1,
+    "emprise foncière": "52215 m²",
+    "desserte": ""
+  },
+  "équipement": {
+    "administration": {
+      "propriétaire principal": "Commune",
+      "gestionnaire principal": "Commune",
+      "propriétaire secondaire": null,
+      "gestionnaire secondaire": null,
+      "gestion DSP": "non"
+    },
+    "mise en service": {
+      "année de mise en service": null,
+      "tranche d'année de service": "Avant 1945",
+      "places en tribune": 0
+    },
+    "ERP": {
+      "catégorie ERP": 3
+    },
+    "présence de": {
+      "vestaire/douche": "non",
+      "éclairage": "oui"
+    },
+    "fiche technique": {
+      "nature du sol": "Béton",
+      "nature de l'équipement": "Intérieur",
+      "hauteur de l'aire d'évolution": 7,
+      "longueur de l'aire d'évolution": 40,
+      "largeur de l'aire d'évolution": 18,
+      "aire de la surface d'évolution": 720,
+      "nombre de vestiaires sportifs": 0,
+      "sanitaires": "oui",
+      "nombre de couloirs/pistes": null,
+      "vestiaires chauffés": "non",
+      "nombre de vestiaires arbitres": 0
+    },
+    "usages": {
+      "types d'utilisateurs": "utilisation scolaire, utilisation clubs, autres",
+      "types d'usages": "performance, formation, récréation"
+    },
+    "travaux": {
+      "derniers travaux: tranche de dates": null,
+      "date des derniers travaux": null,
+      "motif des derniers travaux": ""
+    },
+    "accès handicapé": {
+      "accès handicap mobile à l'aire d'activité": "Oui",
+      "accès handicap mobile aux tribunes": "Non concerné",
+      "accès handicap mobile aux vestiaires": "Non concerné",
+      "accès handicap mobile aux sanitaires": "Oui",
+      "accès handicap sensoriel à l'aire d'activité": "Non",
+      "accès handicap sensoriel aux tribunes": "Non concerné",
+      "accès handicap sensoriel aux vestiaires": "Non concerné",
+      "accès handicap sensoriel aux sanitaires": "Oui"
+    },
+    "locaux complémentaires": {
+      "locaux complémentaires": "accueil réception"
+    },
+    "chauffage/source d'énergie": {
+      "type de chauffage": "aucun"
+    },
+    "aménagements de confort": {
+      "aménagements de confort": "aucun"
+    },
+    "SAE (structure artificielle d'escalade": {
+      "nombre de couloirs": null,
+      "hauteur du mur": null,
+      "surface du mur": null
+    },
+    "accès à l'équipement": {
+      "signalétique de sécurité": "non",
+      "moyens d'alerte": "non",
+      "accès public": "",
+      "accès secours": ""
+    },
+    "locaux": {
+      "démarche HQE": "non",
+      "locaux techniques": "non",
+      "locaux pédagogiques": "non",
+      "PDESI/PDIPR": "non"
+    },
+    "piscine": {
+      "forme du bassin": null,
+      "longueur du bassin": null,
+      "largeur du bassin": null,
+      "surface du bassin": null,
+      "profondeur minimale du bassin": null,
+      "profondeur maximale du bassin": null,
+      "nombre de couloirs": null,
+      "surface des plages": null,
+      "nombre total de tremplins": null,
+      "nombre de tremplins de 1 m": null,
+      "nombre de tremplins de 3 m": null,
+      "nombre total de plateformes": null,
+      "nombre de plateformes de 3 m": null,
+      "nombre de plateformes de 5 m": null,
+      "nombre de plateformes de 7 m": null,
+      "nombre de plateformes de 10 m": null,
+      "présence d'une pataugeoire": "non",
+      "types d'aménagements complémentaires": ""
+    },
+    "athlétisme": {
+      "développement de la piste": null,
+      "longueur de la ligne droite": null,
+      "nombre de couloirs en ligne droite": null,
+      "nombre de couloirs en virage": null,
+      "rivière de steeple": "non",
+      "nombre total d'aires de saut": null,
+      "nombre d'aires de saut en hauteur": null,
+      "nombre d'aires de saut en lonhueur": null,
+      "nombre d'aires de triple saut": null,
+      "nombre d'aires de saut à la perche": null,
+      "nombre total d'aires de lancer": null,
+      "nombre d'aires de lancer de poids": null,
+      "nombre d'aires de lancer de disque": null,
+      "nombre d'aires de lancer de javelot": null,
+      "nombre d'aires de lancer de marteau": null,
+      "nombre d'aires de lancer mixte": null
+    },
+    "tir": {
+      "type de pas de tir": ""
+    },
+    "équipements de nature": {
+      "tour d'arrivée": "non",
+      "treuil": "non"
+    }
+  },
+  "activités": {
+    "nombre d'activités": 4,
+    "liste des activités": [
+      {
+        "index": 190333,
+        "ActLib": "Handball / Mini hand / Handball de plage",
+        "ComLib": "Saint-Siméon-de-Bressieux",
+        "DepLib": "Isère",
+        "ActCode": 3701,
+        "DepCode": "38",
+        "ComInsee": "38457",
+        "ActNivLib": "Scolaire",
+        "EquipementId": "E004I384570001",
+        "ActDiscipline": "Handball",
+        "EquActivitePratique": 1,
+        "EquActiviteSalleSpe": 0,
+        "EquActivitePraticable": 1
+      },
+      {
+        "index": 190332,
+        "ActLib": "Football / Football en salle (Futsal)",
+        "ComLib": "Saint-Siméon-de-Bressieux",
+        "DepLib": "Isère",
+        "ActCode": 2901,
+        "DepCode": "38",
+        "ComInsee": "38457",
+        "ActNivLib": "Entrainement",
+        "EquipementId": "E004I384570001",
+        "ActDiscipline": "Football",
+        "EquActivitePratique": 1,
+        "EquActiviteSalleSpe": 0,
+        "EquActivitePraticable": 1
+      },
+      {
+        "index": 190335,
+        "ActLib": "Tennis",
+        "ComLib": "Saint-Siméon-de-Bressieux",
+        "DepLib": "Isère",
+        "ActCode": 7901,
+        "DepCode": "38",
+        "ComInsee": "38457",
+        "ActNivLib": "Entrainement",
+        "EquipementId": "E004I384570001",
+        "ActDiscipline": "Tennis",
+        "EquActivitePratique": 1,
+        "EquActiviteSalleSpe": 0,
+        "EquActivitePraticable": 1
+      },
+      {
+        "index": 190334,
+        "ActLib": "Escalade",
+        "ComLib": "Saint-Siméon-de-Bressieux",
+        "DepLib": "Isère",
+        "ActCode": 4802,
+        "DepCode": "38",
+        "ComInsee": "38457",
+        "ActNivLib": "Loisir - Entretien - Remise en forme",
+        "EquipementId": "E004I384570001",
+        "ActDiscipline": "Montagne et escalade",
+        "EquActivitePratique": 1,
+        "EquActiviteSalleSpe": 0,
+        "EquActivitePraticable": 1
+      }
+    ]
+  }
 }
 #%%
 loader = FileSystemLoader('templates')
 env = Environment(loader=loader)
 print(env.list_templates())
 #%%
-template = env.get_template('index.html')
+template = env.get_template('index_tpl.html')
 #%%
 result = template.render(json_view)
 #%%
