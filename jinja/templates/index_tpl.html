@@ -15,28 +15,28 @@
         </div>
 
         <h1>fiche équipement :</h1>
-        <p class="eq_name">v.["installation"]["nom"]</p>
+        <p class="eq_name">v["installation"]["nom"]</p>
   
         <h2>installation</h2>
         (peut intégrer plusieurs équipements)
   
         <div class="cell">
             <div class="item" id="ident">
-                <div class="pair"><div class="key">numéro</div><div class="val">{{v.["installation"]["n° installation"]}}</div></div>
-                <div class="pair"><div class="key">nom</div><div class="val">{{v.["installation"]["nom"]}}</div></div>
-                <div class="pair"><div class="key">adresse</div><div class="val">{{v.["installation"]["adresse"]}}</div></div>
+                <div class="pair"><div class="key">numéro</div><div class="val">{{v["installation"]["n° installation"]}}</div></div>
+                <div class="pair"><div class="key">nom</div><div class="val">{{v["installation"]["nom"]}}</div></div>
+                <div class="pair"><div class="key">adresse</div><div class="val">{{v["installation"]["adresse"]}}</div></div>
             </div>
-            <div class="item" id="map"><img src="https://tiles.stadiamaps.com/static/alidade_smooth?api_key= f128f03f-ea45-4ffa-bfc4-a842d9aac632&center={{v["coordy"]}}, {{v["coordx"]}}&zoom=13&markers={{v["coordy"]}}, {{v["coordx"]}},alidade_smooth_sm&size=715x250&dpi=600" /></div>
+            <div class="item" id="map"><img src='https://tiles.stadiamaps.com/static/alidade_smooth?api_key= f128f03f-ea45-4ffa-bfc4-a842d9aac632&center={{v["coordy"]}}, {{v["coordx"]}}&zoom=13&markers={{v["coordy"]}}, {{v["coordx"]}},alidade_smooth_sm&size=715x250&dpi=600' /></div>
             <div class="item" id="caracts">
                 <h4>identification</h4>
-                <div class="pair"><div class="key">Installation particulière</div><div class="val">{{v.["installation"]installation particulière}}</div></div>
-                <div class="pair"><div class="key">Multi commune</div><div class="val">{{v.["installation"]["multicommune"]}}</div></div>
-                <div class="pair"><div class="key">hébergement</div><div class="val">{{v.["installation"]["hébergement"]}}</div></div>
-                <div class="pair"><div class="key">Nombre de lits</div><div class="val">{{v.["installation"]["nb lits"]}}</div></div>
-                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">{{v.["installation"]["nb places de parking"]}}</div></div>
-                <div class="pair"><div class="key">dont places handicapés</div><div class="val">{v.["installation"]["dont handicapé"]}</div></div>
-                <div class="pair"><div class="key">Emprise foncière</div><div class="val">{{v.["installation"]["emprise foncière"]}}</div></div>
-                <div class="pair"><div class="key">Desserte</div><div class="val">{{v.["installation"]["desserte"]}}</div></div>
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">{{v["installation"]installation particulière}}</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">{{v["installation"]["multicommune"]}}</div></div>
+                <div class="pair"><div class="key">hébergement</div><div class="val">{{v["installation"]["hébergement"]}}</div></div>
+                <div class="pair"><div class="key">Nombre de lits</div><div class="val">{{v["installation"]["nb lits"]}}</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">{{v["installation"]["nb places de parking"]}}</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">{v["installation"]["dont handicapé"]}</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">{{v["installation"]["emprise foncière"]}}</div></div>
+                <div class="pair"><div class="key">Desserte</div><div class="val">{{v["installation"]["desserte"]}}</div></div>
             </div>
         </div>
   

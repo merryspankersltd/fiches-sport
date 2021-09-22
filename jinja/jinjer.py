@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from jinja2 import Environment, FileSystemLoader
 #%%
-json_view = {
+v = {
   "EquipementId": "E004I384570001",
   "depcode": "38",
   "depcom": "38457",
