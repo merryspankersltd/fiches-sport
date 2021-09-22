@@ -25,12 +25,12 @@ json_view = {
     "administration": {
       "propriétaire principal": "Commune",
       "gestionnaire principal": "Commune",
-      "propriétaire secondaire": null,
-      "gestionnaire secondaire": null,
+      "propriétaire secondaire": None,
+      "gestionnaire secondaire": None,
       "gestion DSP": "non"
     },
     "mise en service": {
-      "année de mise en service": null,
+      "année de mise en service": None,
       "tranche d'année de service": "Avant 1945",
       "places en tribune": 0
     },
@@ -50,7 +50,7 @@ json_view = {
       "aire de la surface d'évolution": 720,
       "nombre de vestiaires sportifs": 0,
       "sanitaires": "oui",
-      "nombre de couloirs/pistes": null,
+      "nombre de couloirs/pistes": None,
       "vestiaires chauffés": "non",
       "nombre de vestiaires arbitres": 0
     },
@@ -59,8 +59,8 @@ json_view = {
       "types d'usages": "performance, formation, récréation"
     },
     "travaux": {
-      "derniers travaux: tranche de dates": null,
-      "date des derniers travaux": null,
+      "derniers travaux: tranche de dates": None,
+      "date des derniers travaux": None,
       "motif des derniers travaux": ""
     },
     "accès handicapé": {
@@ -83,9 +83,9 @@ json_view = {
       "aménagements de confort": "aucun"
     },
     "SAE (structure artificielle d'escalade": {
-      "nombre de couloirs": null,
-      "hauteur du mur": null,
-      "surface du mur": null
+      "nombre de couloirs": None,
+      "hauteur du mur": None,
+      "surface du mur": None
     },
     "accès à l'équipement": {
       "signalétique de sécurité": "non",
@@ -100,42 +100,42 @@ json_view = {
       "PDESI/PDIPR": "non"
     },
     "piscine": {
-      "forme du bassin": null,
-      "longueur du bassin": null,
-      "largeur du bassin": null,
-      "surface du bassin": null,
-      "profondeur minimale du bassin": null,
-      "profondeur maximale du bassin": null,
-      "nombre de couloirs": null,
-      "surface des plages": null,
-      "nombre total de tremplins": null,
-      "nombre de tremplins de 1 m": null,
-      "nombre de tremplins de 3 m": null,
-      "nombre total de plateformes": null,
-      "nombre de plateformes de 3 m": null,
-      "nombre de plateformes de 5 m": null,
-      "nombre de plateformes de 7 m": null,
-      "nombre de plateformes de 10 m": null,
+      "forme du bassin": None,
+      "longueur du bassin": None,
+      "largeur du bassin": None,
+      "surface du bassin": None,
+      "profondeur minimale du bassin": None,
+      "profondeur maximale du bassin": None,
+      "nombre de couloirs": None,
+      "surface des plages": None,
+      "nombre total de tremplins": None,
+      "nombre de tremplins de 1 m": None,
+      "nombre de tremplins de 3 m": None,
+      "nombre total de plateformes": None,
+      "nombre de plateformes de 3 m": None,
+      "nombre de plateformes de 5 m": None,
+      "nombre de plateformes de 7 m": None,
+      "nombre de plateformes de 10 m": None,
       "présence d'une pataugeoire": "non",
       "types d'aménagements complémentaires": ""
     },
     "athlétisme": {
-      "développement de la piste": null,
-      "longueur de la ligne droite": null,
-      "nombre de couloirs en ligne droite": null,
-      "nombre de couloirs en virage": null,
+      "développement de la piste": None,
+      "longueur de la ligne droite": None,
+      "nombre de couloirs en ligne droite": None,
+      "nombre de couloirs en virage": None,
       "rivière de steeple": "non",
-      "nombre total d'aires de saut": null,
-      "nombre d'aires de saut en hauteur": null,
-      "nombre d'aires de saut en lonhueur": null,
-      "nombre d'aires de triple saut": null,
-      "nombre d'aires de saut à la perche": null,
-      "nombre total d'aires de lancer": null,
-      "nombre d'aires de lancer de poids": null,
-      "nombre d'aires de lancer de disque": null,
-      "nombre d'aires de lancer de javelot": null,
-      "nombre d'aires de lancer de marteau": null,
-      "nombre d'aires de lancer mixte": null
+      "nombre total d'aires de saut": None,
+      "nombre d'aires de saut en hauteur": None,
+      "nombre d'aires de saut en lonhueur": None,
+      "nombre d'aires de triple saut": None,
+      "nombre d'aires de saut à la perche": None,
+      "nombre total d'aires de lancer": None,
+      "nombre d'aires de lancer de poids": None,
+      "nombre d'aires de lancer de disque": None,
+      "nombre d'aires de lancer de javelot": None,
+      "nombre d'aires de lancer de marteau": None,
+      "nombre d'aires de lancer mixte": None
     },
     "tir": {
       "type de pas de tir": ""
