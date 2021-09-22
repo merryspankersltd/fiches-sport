@@ -21,7 +21,7 @@
     
         <div class="ref">
                 Ref/ 391<br>
-                Code commune Insee: 69046<br>
+                Code commune Insee: {{depcom}}<br>
         </div>
 
         <h1>fiche équipement :</h1>
@@ -32,21 +32,20 @@
   
         <div class="cell">
             <div class="item" id="ident">
-                <div class="pair"><div class="key">numéro</div><div class="val">690460001</div></div>
-                <div class="pair"><div class="key">nom</div><div class="val">STADE RAYMOND BOURETTE</div></div>
-                <div class="pair"><div class="key">adresse</div><div class="val">Route Du Bas Privas, 69 390 Charly</div></div>
+                <div class="pair"><div class="key">numéro</div><div class="val">{{n° installation}}</div></div>
+                <div class="pair"><div class="key">nom</div><div class="val">{{nom}}</div></div>
+                <div class="pair"><div class="key">adresse</div><div class="val">{{adresse}}</div></div>
             </div>
-            <div class="item" id="map"><img src="https://tiles.stadiamaps.com/static/alidade_smooth?api_key= f128f03f-ea45-4ffa-bfc4-a842d9aac632&center=45.17062485005455, 5.746651243126769&zoom=13&markers=45.17062485005455, 5.746651243126769,alidade_smooth_sm&size=715x250&dpi=600" /></div>
+            <div class="item" id="map"><img src="https://tiles.stadiamaps.com/static/alidade_smooth?api_key= f128f03f-ea45-4ffa-bfc4-a842d9aac632&center={{coordy}}, {{coordx}}&zoom=13&markers={{coordy}}, {{coordx}},alidade_smooth_sm&size=715x250&dpi=600" /></div>
             <div class="item" id="caracts">
-                <div class="pair"><div class="key">Installation particulière</div><div class="val">non</div></div>
-                <div class="pair"><div class="key">Multi commune</div><div class="val">non</div></div>
-                <div class="pair"><div class="key">Nombre de couvert</div><div class="val">0</div></div>
-                <div class="pair"><div class="key">Nombre de lit</div><div class="val">0</div></div>
-                <div class="pair"><div class="key">Présence d’un internat</div><div class="val">non</div></div>
-                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">49</div></div>
-                <div class="pair"><div class="key">dont places handicapés</div><div class="val">0</div></div>
-                <div class="pair"><div class="key">Emprise foncière</div><div class="val">18 816</div></div>
-                <div class="pair"><div class="key">Gardien</div><div class="val">non</div></div>
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">{{installation particulière}}</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">{{multicommune}}</div></div>
+                <div class="pair"><div class="key">hébergement</div><div class="val">{{hébergement}}</div></div>
+                <div class="pair"><div class="key">Nombre de lits</div><div class="val">{{nb lits}}</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">{{nb places de parking}}</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">{dont handicapé}</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">{{emprise foncière}}</div></div>
+                <div class="pair"><div class="key">Desserte</div><div class="val">{{desserte}}</div></div>
             </div>
             <div class="item" id="caracts">
                 <div class="pair"><div class="key">Installation particulière</div><div class="val">non</div></div>
