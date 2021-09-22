@@ -70,6 +70,7 @@
     
     #map {
       break-before: column;
+      border: 0.05em solid silver;
     }
     
     .pair {
