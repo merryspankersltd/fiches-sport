@@ -26,7 +26,7 @@
                 <div class="pair"><div class="key">nom</div><div class="val">{{v["installation"]["nom"]}}</div></div>
                 <div class="pair"><div class="key">adresse</div><div class="val">{{v["installation"]["adresse"]}}</div></div>
             </div>
-            <div class="item" id="map"><img src='https://tiles.stadiamaps.com/static/alidade_smooth?api_key= f128f03f-ea45-4ffa-bfc4-a842d9aac632&center={{v["coordy"]}},{{v["coordx"]}}&zoom=14&markers={{v["coordy"]}},{{v["coordx"]}},alidade_smooth_sm&size=718x600&dpi=600' /></div>
+            <div class="item" id="map"><img src='https://tiles.stadiamaps.com/static/alidade_smooth?api_key= f128f03f-ea45-4ffa-bfc4-a842d9aac632&center={{v["coordy"]}},{{v["coordx"]}}&zoom=14&markers={{v["coordy"]}},{{v["coordx"]}}&size=718x600&dpi=600' /></div>
             <div class="item" id="caracts">
                 <h4>identification</h4>
                 <div class="pair"><div class="key">Installation particulière</div><div class="val">{{v["installation"]["installation particulière"]}}</div></div>
@@ -179,13 +179,13 @@
                 <div class="pair"><div class="key">nombre d'aires de lancer mixte</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de lancer mixte"]}}</div></div>
             </div>
             {% endif %}
-            {% if v["équipement"]["tir"]["type de pas de tir"] == "" %}
+            {% if v["équipement"]["tir"]["type de pas de tir"] != "" %}
             <div class="item" id="caracts">
                 <h4>tir</h4>
                 <div class="pair"><div class="key">type de pas de tir</div><div class="val">{{v["équipement"]["tir"]["type de pas de tir"]}}</div></div>
             </div>
             {% endif %}
-            {% if v["équipement"]["équipements de nature"]["tour d'arrivée"] != None %}
+            {% if (v["équipement"]["équipements de nature"]["tour d'arrivée"] != "non" and v["équipement"]["équipements de nature"]["treuil"] != "non") %}
             <div class="item" id="caracts">
                 <h4>équipements de nature</h4>
                 <div class="pair"><div class="key">tour d'arrivée</div><div class="val">{{v["équipement"]["équipements de nature"]["tour d'arrivée"]}}</div></div>
@@ -196,6 +196,16 @@
   
         <h2>activités</h2>
         <div class="cell">
+            {% for act in v["activités"]["liste des activités"] %}
+            <div class="item">
+                <h4>{{act["ActLib"]}}</h4>
+                <div class="pair"><div class="key">discipline</div><div class="val">{{act["ActDiscipline"]}}</div></div>
+                <div class="pair"><div class="key">niveau</div><div class="val">{{act["ActNivLib"]}}</div></div>
+                <div class="pair"><div class="key">salle spécialisée</div><div class="val">{{act["EquActiviteSalleSpe"]}}</div></div>
+                <div class="pair"><div class="key">activité praticable</div><div class="val">{{act["EquActivitePraticable"]}}</div></div>
+                <div class="pair"><div class="key">activité pratiquée</div><div class="val">{{act["EquActivitePratique"]}}</div></div>
+            </div>
+            {% endfor %}
         </div>
 
     </body>
