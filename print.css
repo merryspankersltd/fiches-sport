@@ -11,18 +11,18 @@
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 0.8em;
       
-      @left-top: {
+      @left-top {
         content: counter(page);
         color: #a0381e;
         font-size: 1em;
         font-weight: bold;
       }
       
-      @top-left: {
+      @top-left {
         content: element(ref);
       }
       
-      @top-right: {
+      @top-right {
         content:
           url("https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/logo_gl.png")
           url("https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/logo_agence.png");
