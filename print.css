@@ -69,8 +69,6 @@
     }
     
     #map {
-      column-span: all;
-      height: 75mm;
       margin-top: 2em;
       margin-bottom: 2em;
     }
