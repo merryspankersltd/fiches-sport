@@ -218,9 +218,11 @@ print(env.list_templates())
 #%%
 template = env.get_template('index_tpl.html')
 #%%
-result = template.render(json_view)
+result = template.render(v=v)
 #%%
 with open(r'rendered\index_rendered.html', 'wb') as index:
     index.write(result.encode('utf-8'))
+
+# %%
 
 # %%
