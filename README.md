@@ -28,7 +28,9 @@ import base64
 
 # ...insert selenium init code here...
 
-pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
-with open(r'/some/export.pdf', "wb") as f:
-  f.write(base64.b64decode(pdf['data']))
+    driver.get(html_path)
+    time.sleep(5) # chromedrive needs some time to fully load html 
+    pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
+    with open(pdf_path, "wb") as f:
+        f.write(base64.b64decode(pdf['data']))
 ```
