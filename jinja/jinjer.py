@@ -5,6 +5,7 @@
 from jinja2 import Environment, FileSystemLoader
 from selenium import webdriver
 import json
+import base64
 
 def my_finalize(thing):
     return thing if thing is not None else 'NC'
@@ -26,8 +27,7 @@ settings = {
         "isHeaderFooterEnabled": False,
         "isCssBackgroundEnabled": True}
 prefs = {
-    'printing.print_preview_sticky_settings.appState': json.dumps(settings),
-    'savefile.default_directory': r'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\pdf'}
+    'printing.print_preview_sticky_settings.appState': json.dumps(settings)}
 chrome_options.add_experimental_option('prefs', prefs)
 chrome_options.add_argument('--kiosk-printing')
 chrome_options.add_argument("--headless")
@@ -39,7 +39,7 @@ with open(r'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\fiches
     json_views = f.readlines()
 
 # loop on views
-for view in json_views[:100]:
+for view in json_views:
 
     # render json view
     v = json.loads(view)
@@ -52,9 +52,12 @@ for view in json_views[:100]:
 
     # export pdf
     driver.get(rf'rendered\fiche_{v["depcom"]}_{v["EquipementId"]}.html')
-    driver.execute_script('window.print();')
+    # driver.execute_script('window.print();')
+    pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
     driver.implicitly_wait(5)
-    
+    with open(rf'rendered\fiche_{v["depcom"]}_{v["EquipementId"]}.pdf', "wb") as f:
+        f.write(base64.b64decode(pdf['data']))
+        
     # log on console
     print(v["EquipementId"] + ' done')
 
