@@ -1,5 +1,6 @@
 #%%
 from selenium import webdriver
+import base64
 import json
 
 #source: https://stackoverflow.com/questions/56897041/how-to-save-opened-page-as-pdf-in-selenium-python
@@ -27,16 +28,18 @@ chrome_options.add_argument("--headless")
 #%%
 # todo: run the following headless
 driver = webdriver.Chrome(options=chrome_options)
-driver.implicitly_wait(5)
+driver.implicitly_wait(50)
 
 #%%
-driver.get("https://merryspankersltd.github.io/fiches-sport/")
+driver.get(r'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\rendered\fiche_69096_E001I690960002.html')
 
 #%%
 # todo: option to print with background ?
-driver.execute_script('window.print();')
-driver.implicitly_wait(5)
-
+#driver.execute_script('window.print();')
+pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
+driver.implicitly_wait(50)
+with open(r'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\pdf\selenium_test.pdf', "wb") as f:
+  f.write(base64.b64decode(pdf['data']))
 #%%
 driver.quit()
 # %%

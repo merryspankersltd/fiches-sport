@@ -201,9 +201,9 @@
                 <h4>{{act["ActLib"]}}</h4>
                 <div class="pair"><div class="key">discipline</div><div class="val">{{act["ActDiscipline"]}}</div></div>
                 <div class="pair"><div class="key">niveau</div><div class="val">{{act["ActNivLib"]}}</div></div>
-                <div class="pair"><div class="key">salle spécialisée</div><div class="val">{{act["EquActiviteSalleSpe"]}}</div></div>
-                <div class="pair"><div class="key">activité praticable</div><div class="val">{{act["EquActivitePraticable"]}}</div></div>
-                <div class="pair"><div class="key">activité pratiquée</div><div class="val">{{act["EquActivitePratique"]}}</div></div>
+                <div class="pair"><div class="key">salle spécialisée</div><div class="val">{% if act["EquActiviteSalleSpe"] == 1 %}oui{% else %}non{% endif %}</div></div>
+                <div class="pair"><div class="key">activité praticable</div><div class="val">{% if act["EquActivitePraticable"] == 1 %}oui{% else %}non{% endif %}</div></div>
+                <div class="pair"><div class="key">activité pratiquée</div><div class="val">{% if act["EquActivitePratique"] == 1 %}oui{% else %}non{% endif %}</div></div>
             </div>
             {% endfor %}
         </div>
