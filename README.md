@@ -36,3 +36,4 @@ pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
 with open(pdf_path, "wb") as f:
     f.write(base64.b64decode(pdf['data']))
 ```
+https://github.com/merryspankersltd/fiches-sport/blob/52978fa0de4308a21bf75e70dd2cd84f68aa9b11/jinja/jinjer.py
