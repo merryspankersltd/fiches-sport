@@ -24,5 +24,11 @@ https://chromedriver.chromium.org
 
 La solution ultime pour imprimer un pdf avec selenium :
 ```python
+import base64
+
+# ...insert selenium init code here...
+
 pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
+with open(r'/some/export.pdf', "wb") as f:
+  f.write(base64.b64decode(pdf['data']))
 ```
