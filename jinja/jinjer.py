@@ -32,7 +32,7 @@ chrome_options.add_experimental_option('prefs', prefs)
 chrome_options.add_argument('--kiosk-printing')
 chrome_options.add_argument("--headless")
 driver = webdriver.Chrome(options=chrome_options)
-driver.implicitly_wait(5)
+driver.implicitly_wait(50)
 
 # get views
 with open(r'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\fiches_json_rhone_202109230112.txt', 'r', encoding='utf-8') as f:
@@ -46,16 +46,18 @@ for view in json_views:
     template = env.get_template('index_tpl.html')
     result = template.render(v=v)
 
+    html_path = rf'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\rendered\fiche_{v["depcom"]}_{v["EquipementId"]}.html'
+    pdf_path = rf'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\pdf\fiche_{v["depcom"]}_{v["EquipementId"]}.pdf'
     # write rendered html
-    with open(rf'rendered\fiche_{v["depcom"]}_{v["EquipementId"]}.html', 'wb') as index:
+    with open(html_path, 'wb') as index:
         index.write(result.encode('utf-8'))
 
     # export pdf
-    driver.get(rf'rendered\fiche_{v["depcom"]}_{v["EquipementId"]}.html')
+    driver.get(html_path)
     # driver.execute_script('window.print();')
     pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
-    driver.implicitly_wait(5)
-    with open(rf'rendered\fiche_{v["depcom"]}_{v["EquipementId"]}.pdf', "wb") as f:
+    driver.implicitly_wait(50)
+    with open(pdf_path, "wb") as f:
         f.write(base64.b64decode(pdf['data']))
         
     # log on console
