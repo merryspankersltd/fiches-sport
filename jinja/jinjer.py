@@ -55,7 +55,7 @@ for view in json_views:
 
     # export pdf
     driver.get(html_path)
-    time.sleep(10)
+    time.sleep(5)
     # driver.execute_script('window.print();')
     pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
     with open(pdf_path, "wb") as f:
