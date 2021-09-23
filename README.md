@@ -21,3 +21,8 @@ https://jinja.palletsprojects.com
 https://www.selenium.dev/
 
 https://chromedriver.chromium.org
+
+La solution ultime pour imprimer un pdf avec selenium :
+```python
+pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
+```
