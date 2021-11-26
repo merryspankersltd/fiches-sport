@@ -44,7 +44,7 @@ for view in json_views:
 
     # render json view
     v = json.loads(view)
-    template = env.get_template('index_tpl.html')
+    template = env.get_template(r'templates\index_tpl.html')
     result = template.render(v=v)
 
     html_path = rf'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\rendered\fiche_{v["depcom"]}_{v["EquipementId"]}.html'
