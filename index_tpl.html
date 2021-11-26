@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fiche sport</title>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/merryspankersltd/fiches-sport/main/print.css">
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+  </head>
+
+  <body>
+    
+        <div class="ref">
+                N° équipement: {{v["N° équipement"]}}<br>
+                Code commune Insee: {{v["depcom"]}}<br>
+        </div>
+
+        <h1>fiche équipement :</h1>
+        <p class="eq_name">{{v["installation"]["nom"]}} : {{v["Nom équipement"]}}</p>
+  
+        <h2>installation</h2>
+        (peut intégrer plusieurs équipements)
+  
+        <div class="cell">
+            <div class="item" id="ident">
+                <div class="pair"><div class="key">numéro</div><div class="val">{{v["installation"]["n° installation"]}}</div></div>
+                <div class="pair"><div class="key">nom</div><div class="val">{{v["installation"]["nom"]}}</div></div>
+                <div class="pair"><div class="key">adresse</div><div class="val">{{v["installation"]["adresse"]}}</div></div>
+            </div>
+            <div class="item" id="map"><img src='https://tiles.stadiamaps.com/static/alidade_smooth?api_key= f128f03f-ea45-4ffa-bfc4-a842d9aac632&center={{v["coordy"]}},{{v["coordx"]}}&zoom=14&markers={{v["coordy"]}},{{v["coordx"]}}&size=718x600&dpi=600' /></div>
+            <div class="item" id="caracts">
+                <h4>identification</h4>
+                <div class="pair"><div class="key">Installation particulière</div><div class="val">{{v["installation"]["installation particulière"]}}</div></div>
+                <div class="pair"><div class="key">Multi commune</div><div class="val">{{v["installation"]["multicommune"]}}</div></div>
+                <div class="pair"><div class="key">hébergement</div><div class="val">{{v["installation"]["hébergement"]}}</div></div>
+                <div class="pair"><div class="key">Nombre de lits</div><div class="val">{{v["installation"]["nb lits"]}}</div></div>
+                <div class="pair"><div class="key">Nombre total de place de parking</div><div class="val">{{v["installation"]["nb places de parking"]}}</div></div>
+                <div class="pair"><div class="key">dont places handicapés</div><div class="val">{{v["installation"]["dont handicapé"]}}</div></div>
+                <div class="pair"><div class="key">Emprise foncière</div><div class="val">{{v["installation"]["emprise foncière"]}}</div></div>
+                <div class="pair"><div class="key">Desserte</div><div class="val">{{v["installation"]["desserte"]}}</div></div>
+            </div>
+        </div>
+  
+        <h2>équipement</h2>
+        <div class="cell">
+            <div class="item" id="caracts">
+                <h4>administration</h4>
+                <div class="pair"><div class="key">propriétaire principal</div><div class="val">{{v["équipement"]["administration"]["propriétaire principal"]}}</div></div>
+                <div class="pair"><div class="key">gestionnaire principal</div><div class="val">{{v["équipement"]["administration"]["gestionnaire principal"]}}</div></div>
+                <div class="pair"><div class="key">propriétaire secondaire</div><div class="val">{{v["équipement"]["administration"]["propriétaire secondaire"]}}</div></div>
+                <div class="pair"><div class="key">gestionnaire secondaire</div><div class="val">{{v["équipement"]["administration"]["gestionnaire secondaire"]}}</div></div>
+                <div class="pair"><div class="key">gestion DSP</div><div class="val">{{v["équipement"]["administration"]["gestion DSP"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>mise en service</h4>
+                <div class="pair"><div class="key">date de mise en service</div><div class="val">{{v["équipement"]["mise en service"]["année de mise en service"]}}</div></div>
+                <div class="pair"><div class="key">tranche de dates de mise en service</div><div class="val">{{v["équipement"]["mise en service"]["tranche d'année de mise en service"]}}</div></div>
+                <div class="pair"><div class="key">places en tribune</div><div class="val">{{v["équipement"]["mise en service"]["places en tribune"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>ERP</h4>
+                <div class="pair"><div class="key">catégorie ERP</div><div class="val">{{v["équipement"]["ERP"]["catégorie ERP"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>présence de</h4>
+                <div class="pair"><div class="key">vestiaire/douche</div><div class="val">{{v["équipement"]["présence de"]["vestiaire/douche"]}}</div></div>
+                <div class="pair"><div class="key">éclairage</div><div class="val">{{v["équipement"]["présence de"]["éclairage"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>fiche technique</h4>
+                <div class="pair"><div class="key">nature du sol</div><div class="val">{{v["équipement"]["fiche technique"]["nature du sol"]}}</div></div>
+                <div class="pair"><div class="key">nature de l'équipement</div><div class="val">{{v["équipement"]["fiche technique"]["nature de l'équipement"]}}</div></div>
+                <div class="pair"><div class="key">hauteur de l'aire d'évolution</div><div class="val">{{v["équipement"]["fiche technique"]["hauteur de l'aire d'évolution"]}}</div></div>
+                <div class="pair"><div class="key">longueur de l'aire d'évolution</div><div class="val">{{v["équipement"]["fiche technique"]["longueur de l'aire d'évolution"]}}</div></div>
+                <div class="pair"><div class="key">largeur de l'aire d'évolution</div><div class="val">{{v["équipement"]["fiche technique"]["largeur de l'aire d'évolution"]}}</div></div>
+                <div class="pair"><div class="key">aire de l'aire d'évolution</div><div class="val">{{v["équipement"]["fiche technique"]["aire de l'aire d'évolution"]}}</div></div>
+                <div class="pair"><div class="key">nombre de vestiaires sportifs</div><div class="val">{{v["équipement"]["fiche technique"]["nombre de vestiaires sportifs"]}}</div></div>
+                <div class="pair"><div class="key">sanitaires</div><div class="val">{{v["équipement"]["fiche technique"]["sanitaires"]}}</div></div>
+                <div class="pair"><div class="key">nombre de couloirs/pistes</div><div class="val">{{v["équipement"]["fiche technique"]["nombre de couloirs/pistes"]}}</div></div>
+                <div class="pair"><div class="key">vestiaires chauffés</div><div class="val">{{v["équipement"]["fiche technique"]["vestiaires chauffés"]}}</div></div>
+                <div class="pair"><div class="key">nombre de vestiaires arbitres</div><div class="val">{{v["équipement"]["fiche technique"]["nombre de vestiaires arbitres"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>usages</h4>
+                <div class="pair"><div class="key">types d'utilisateurs</div><div class="val">{{v["équipement"]["usages"]["types d'utilisateurs"]}}</div></div>
+                <div class="pair"><div class="key">types d'usages</div><div class="val">{{v["équipement"]["usages"]["types d'usages"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>travaux</h4>
+                <div class="pair"><div class="key">derniers travaux: tranche de dates</div><div class="val">{{v["équipement"]["travaux"]["derniers travaux: tranche de dates"]}}</div></div>
+                <div class="pair"><div class="key">date des derniers travaux</div><div class="val">{{v["équipement"]["travaux"]["date des derniers travaux"]}}</div></div>
+                <div class="pair"><div class="key">motif des derniers travaux</div><div class="val">{{v["équipement"]["travaux"]["motif des derniers travaux"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>accès handicapé</h4>
+                <div class="pair"><div class="key">accès handicap mobile à l'aire d'activité</div><div class="val">{{v["équipement"]["accès handicapé"]["accès handicap mobile à l'aire d'activité"]}}</div></div>
+                <div class="pair"><div class="key">accès handicap mobile aux tribunes</div><div class="val">{{v["équipement"]["accès handicapé"]["accès handicap mobile aux tribunes"]}}</div></div>
+                <div class="pair"><div class="key">accès handicap mobile aux vestiaires</div><div class="val">{{v["équipement"]["accès handicapé"]["accès handicap mobile aux vestiaires"]}}</div></div>
+                <div class="pair"><div class="key">accès handicap mobile aux sanitaires</div><div class="val">{{v["équipement"]["accès handicapé"]["accès handicap mobile aux sanitaires"]}}</div></div>
+                <div class="pair"><div class="key">accès handicap sensoriel à l'aire d'activité</div><div class="val">{{v["équipement"]["accès handicapé"]["accès handicap sensoriel à l'aire d'activité"]}}</div></div>
+                <div class="pair"><div class="key">accès handicap sensoriel aux tribunes</div><div class="val">{{v["équipement"]["accès handicapé"]["accès handicap sensoriel aux tribunes"]}}</div></div>
+                <div class="pair"><div class="key">accès handicap sensoriel aux vestiaires</div><div class="val">{{v["équipement"]["accès handicapé"]["accès handicap sensoriel aux vestiaires"]}}</div></div>
+                <div class="pair"><div class="key">accès handicap sensoriel aux sanitaires</div><div class="val">{{v["équipement"]["accès handicapé"]["accès handicap sensoriel aux sanitaires"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>locaux complémentaires</h4>
+                <div class="pair"><div class="key">locaux complémentaires</div><div class="val">{{v["équipement"]["locaux complémentaires"]["locaux complémentaires"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>chauffage/source d'énergie</h4>
+                <div class="pair"><div class="key">type de chauffage</div><div class="val">{{v["équipement"]["chauffage/source d'énergie"]["type de chauffage"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>aménagements de confort</h4>
+                <div class="pair"><div class="key">aménagements de confort</div><div class="val">{{v["équipement"]["aménagements de confort"]["aménagements de confort"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>accès à l'équipement</h4>
+                <div class="pair"><div class="key">signalétique de sécurité</div><div class="val">{{v["équipement"]["accès à l'équipement"]["signalétique de sécurité"]}}</div></div>
+                <div class="pair"><div class="key">moyens d'alerte</div><div class="val">{{v["équipement"]["accès à l'équipement"]["moyens d'alerte"]}}</div></div>
+                <div class="pair"><div class="key">accès public</div><div class="val">{{v["équipement"]["accès à l'équipement"]["accès public"]}}</div></div>
+                <div class="pair"><div class="key">accès secours</div><div class="val">{{v["équipement"]["accès à l'équipement"]["accès secours"]}}</div></div>
+            </div>
+            <div class="item" id="caracts">
+                <h4>locaux</h4>
+                <div class="pair"><div class="key">démarche HQE</div><div class="val">{{v["équipement"]["locaux"]["démarche HQE"]}}</div></div>
+                <div class="pair"><div class="key">locaux techniques</div><div class="val">{{v["équipement"]["locaux"]["locaux techniques"]}}</div></div>
+                <div class="pair"><div class="key">locaux pédagogiques</div><div class="val">{{v["équipement"]["locaux"]["locaux pédagogiques"]}}</div></div>
+                <div class="pair"><div class="key">PDESI/PDIPR</div><div class="val">{{v["équipement"]["locaux"]["PDESI/PDIPR"]}}</div></div>
+            </div>
+            {% if v["équipement"]["SAE (structure artificielle d'escalade"]["nombre de couloirs"] != None %}
+            <div class="item" id="caracts">
+                <h4>SAE (structure artificielle d'escalade</h4>
+                <div class="pair"><div class="key">nombre de couloirs</div><div class="val">{{v["équipement"]["SAE (structure artificielle d'escalade"]["nombre de couloirs"]}}</div></div>
+                <div class="pair"><div class="key">hauteur du mur</div><div class="val">{{v["équipement"]["SAE (structure artificielle d'escalade"]["hauteur du mur"]}}</div></div>
+                <div class="pair"><div class="key">surface du mur</div><div class="val">{{v["équipement"]["SAE (structure artificielle d'escalade"]["surface du mur"]}}</div></div>
+            </div>
+            {% endif %}
+            {% if v["équipement"]["piscine"]["surface du bassin"] != None %}
+            <div class="item" id="caracts">
+                <h4>piscine</h4>
+                <div class="pair"><div class="key">forme du bassin</div><div class="val">{{v["équipement"]["piscine"]["forme du bassin"]}}</div></div>
+                <div class="pair"><div class="key">longueur du bassin</div><div class="val">{{v["équipement"]["piscine"]["longueur du bassin"]}}</div></div>
+                <div class="pair"><div class="key">largeur du bassin</div><div class="val">{{v["équipement"]["piscine"]["largeur du bassin"]}}</div></div>
+                <div class="pair"><div class="key">surface du bassin</div><div class="val">{{v["équipement"]["piscine"]["surface du bassin"]}}</div></div>
+                <div class="pair"><div class="key">profondeur minimale du bassin</div><div class="val">{{v["équipement"]["piscine"]["profondeur minimale du bassin"]}}</div></div>
+                <div class="pair"><div class="key">profondeur maximale du bassin</div><div class="val">{{v["équipement"]["piscine"]["profondeur maximale du bassin"]}}</div></div>
+                <div class="pair"><div class="key">nombre de couloirs</div><div class="val">{{v["équipement"]["piscine"]["nombre de couloirs"]}}</div></div>
+                <div class="pair"><div class="key">surface des plages</div><div class="val">{{v["équipement"]["piscine"]["surface des plages"]}}</div></div>
+                <div class="pair"><div class="key">nombre total de tremplins</div><div class="val">{{v["équipement"]["piscine"]["nombre total de tremplins"]}}</div></div>
+                <div class="pair"><div class="key">nombre de tremplins de 1 m</div><div class="val">{{v["équipement"]["piscine"]["nombre de tremplins de 1 m"]}}</div></div>
+                <div class="pair"><div class="key">nombre de tremplins de 3 m</div><div class="val">{{v["équipement"]["piscine"]["nombre de tremplins de 3 m"]}}</div></div>
+                <div class="pair"><div class="key">nombre total de plateformes</div><div class="val">{{v["équipement"]["piscine"]["nombre total de plateformes"]}}</div></div>
+                <div class="pair"><div class="key">nombre de plateformes de 3 m</div><div class="val">{{v["équipement"]["piscine"]["nombre de plateformes de 3 m"]}}</div></div>
+                <div class="pair"><div class="key">nombre de plateformes de 5 m</div><div class="val">{{v["équipement"]["piscine"]["nombre de plateformes de 5 m"]}}</div></div>
+                <div class="pair"><div class="key">nombre de plateformes de 7 m</div><div class="val">{{v["équipement"]["piscine"]["nombre de plateformes de 7 m"]}}</div></div>
+                <div class="pair"><div class="key">nombre de plateformes de 10 m</div><div class="val">{{v["équipement"]["piscine"]["nombre de plateformes de 10 m"]}}</div></div>
+                <div class="pair"><div class="key">présence d'une pataugeoire</div><div class="val">{{v["équipement"]["piscine"]["présence d'une pataugeoire"]}}</div></div>
+                <div class="pair"><div class="key">types d'aménagements complémentaires</div><div class="val">{{v["équipement"]["piscine"]["types d'aménagements complémentaires"]}}</div></div>
+            </div>
+            {% endif %}
+            {% if v["équipement"]["athlétisme"]["développement de la piste"] != None %}
+            <div class="item" id="caracts">
+                <h4>athlétisme</h4>
+                <div class="pair"><div class="key">développement de la piste</div><div class="val">{{v["équipement"]["athlétisme"]["développement de la piste"]}}</div></div>
+                <div class="pair"><div class="key">longueur de la ligne droite</div><div class="val">{{v["équipement"]["athlétisme"]["longueur de la ligne droite"]}}</div></div>
+                <div class="pair"><div class="key">nombre de couloirs en ligne droite</div><div class="val">{{v["équipement"]["athlétisme"]["nombre de couloirs en ligne droite"]}}</div></div>
+                <div class="pair"><div class="key">nombre de couloirs en virage</div><div class="val">{{v["équipement"]["athlétisme"]["nombre de couloirs en virage"]}}</div></div>
+                <div class="pair"><div class="key">rivière de steeple</div><div class="val">{{v["équipement"]["athlétisme"]["rivière de steeple"]}}</div></div>
+                <div class="pair"><div class="key">nombre total d'aires de saut</div><div class="val">{{v["équipement"]["athlétisme"]["nombre total d'aires de saut"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de saut en hauteur</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de saut en hauteur"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de saut en longueur</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de saut en lonhueur"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de triple saut</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de triple saut"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de saut à la perche</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de saut à la perche"]}}</div></div>
+                <div class="pair"><div class="key">nombre total d'aires de lancer</div><div class="val">{{v["équipement"]["athlétisme"]["nombre total d'aires de lancer"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de lancer de poids</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de lancer de poids"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de lancer de disque</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de lancer de disque"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de lancer de javelot</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de lancer de javelot"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de lancer de marteau</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de lancer de marteau"]}}</div></div>
+                <div class="pair"><div class="key">nombre d'aires de lancer mixte</div><div class="val">{{v["équipement"]["athlétisme"]["nombre d'aires de lancer mixte"]}}</div></div>
+            </div>
+            {% endif %}
+            {% if v["équipement"]["tir"]["type de pas de tir"] != "" %}
+            <div class="item" id="caracts">
+                <h4>tir</h4>
+                <div class="pair"><div class="key">type de pas de tir</div><div class="val">{{v["équipement"]["tir"]["type de pas de tir"]}}</div></div>
+            </div>
+            {% endif %}
+            {% if (v["équipement"]["équipements de nature"]["tour d'arrivée"] != "non" and v["équipement"]["équipements de nature"]["treuil"] != "non") %}
+            <div class="item" id="caracts">
+                <h4>équipements de nature</h4>
+                <div class="pair"><div class="key">tour d'arrivée</div><div class="val">{{v["équipement"]["équipements de nature"]["tour d'arrivée"]}}</div></div>
+                <div class="pair"><div class="key">treuil</div><div class="val">{{v["équipement"]["équipements de nature"]["treuil"]}}</div></div>
+            </div>
+            {% endif %}
+        </div>
+  
+        <h2>activités</h2>
+        <div class="cell">
+            {% for act in v["activités"]["liste des activités"] %}
+            <div class="item">
+                <h4>{{act["ActLib"]}}</h4>
+                <div class="pair"><div class="key">discipline</div><div class="val">{{act["ActDiscipline"]}}</div></div>
+                <div class="pair"><div class="key">niveau</div><div class="val">{{act["ActNivLib"]}}</div></div>
+                <div class="pair"><div class="key">salle spécialisée</div><div class="val">{% if act["EquActiviteSalleSpe"] == 1 %}oui{% else %}non{% endif %}</div></div>
+                <div class="pair"><div class="key">activité praticable</div><div class="val">{% if act["EquActivitePraticable"] == 1 %}oui{% else %}non{% endif %}</div></div>
+                <div class="pair"><div class="key">activité pratiquée</div><div class="val">{% if act["EquActivitePratique"] == 1 %}oui{% else %}non{% endif %}</div></div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </body>
+</html>
