@@ -22,6 +22,10 @@ https://www.selenium.dev/
 
 https://chromedriver.chromium.org
 
+A noter:
+- les versions de chrome et de chromedriver.exe doivent correspondre. Chromedriver.exe doit être accessible dans le PATH (emplacement classique: `C:\Program Files (x86)\chromedriver\chromedriver.exe`)
+- le dossier template est référencé par jinja dans l'option `loader = FileSystemLoader('path\to\templates')`. Ensuite, le template html est simplement appelé par son nom de fichier dans `template = env.get_template('index_tpl.html')`
+
 La solution ultime pour imprimer un pdf avec selenium :
 ```python
 import base64
