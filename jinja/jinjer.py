@@ -12,7 +12,7 @@ def my_finalize(thing):
     return thing if thing is not None else 'NC'
 
 # jinja settings
-loader = FileSystemLoader('templates')
+loader = FileSystemLoader(r'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\templates')
 env = Environment(loader=loader, finalize=my_finalize)
 
 # selenium settings
@@ -47,8 +47,8 @@ for view in json_views:
     template = env.get_template('index_tpl.html')
     result = template.render(v=v)
 
-    html_path = rf'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\rendered\fiche_{v["depcom"]}_{v["EquipementId"]}.html'
-    pdf_path = rf'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\pdf\fiche_{v["depcom"]}_{v["EquipementId"]}.pdf'
+    html_path = rf'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\rendered\fiche_{v["depcom"]}_{v["N° équipement"]}.html'
+    pdf_path = rf'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\jinja\pdf\fiche_{v["depcom"]}_{v["N° équipement"]}.pdf'
     # write rendered html
     with open(html_path, 'wb') as index:
         index.write(result.encode('utf-8'))
@@ -62,7 +62,7 @@ for view in json_views:
         f.write(base64.b64decode(pdf['data']))
         
     # log on console
-    print(v["EquipementId"] + ' done')
+    print(v["N° équipement"] + ' done')
 
 driver.quit()
 # %%
