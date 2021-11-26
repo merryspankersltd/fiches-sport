@@ -36,7 +36,7 @@ driver = webdriver.Chrome(options=chrome_options)
 driver.implicitly_wait(5000)
 
 # get views
-with open(r'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\fiches_json_rhone_202109230112.txt', 'r', encoding='utf-8') as f:
+with open(r'C:\Users\marcl\Documents\pro\fiches_sport_github\fiches-sport\fiches_json_metro_part1_202111261640.txt', 'r', encoding='utf-8') as f:
     json_views = f.readlines()
 
 # loop on views

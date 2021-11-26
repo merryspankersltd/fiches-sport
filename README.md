@@ -21,3 +21,19 @@ https://jinja.palletsprojects.com
 https://www.selenium.dev/
 
 https://chromedriver.chromium.org
+
+La solution ultime pour imprimer un pdf avec selenium :
+```python
+import base64
+
+# ...insert selenium init code here...
+
+driver.get(html_path)
+time.sleep(5) # chromedrive needs some time to fully load html
+
+pdf = driver.execute_cdp_cmd("Page.printToPDF", {"printBackground": True})
+
+with open(pdf_path, "wb") as f:
+    f.write(base64.b64decode(pdf['data']))
+```
+https://github.com/merryspankersltd/fiches-sport/blob/52978fa0de4308a21bf75e70dd2cd84f68aa9b11/jinja/jinjer.py
